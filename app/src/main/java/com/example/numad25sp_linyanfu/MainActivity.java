@@ -1,5 +1,6 @@
 package com.example.numad25sp_linyanfu;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -9,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,6 +32,12 @@ public class MainActivity extends AppCompatActivity {
         b.setOnClickListener(v -> {
             t.setText("Linyan Fu");
             t2.setText("fu.liny@northeastern.edu");
+        });
+
+        Button calcButton = findViewById(R.id.button2);
+        calcButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, QuicCalcActivity.class);
+            startActivity(intent);
         });
 
     }
