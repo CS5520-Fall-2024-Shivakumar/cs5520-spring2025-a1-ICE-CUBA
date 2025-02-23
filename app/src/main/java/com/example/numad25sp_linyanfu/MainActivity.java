@@ -25,13 +25,10 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        TextView t = findViewById(R.id.text1);
-        TextView t2 = findViewById(R.id.text2);
-
         Button b = findViewById(R.id.button);
         b.setOnClickListener(v -> {
-            t.setText("Linyan Fu");
-            t2.setText("fu.liny@northeastern.edu");
+            Intent intent = new Intent(MainActivity.this, AboutMeActivity.class);
+            startActivity(intent);
         });
 
         Button calcButton = findViewById(R.id.button2);
@@ -39,6 +36,13 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, QuicCalcActivity.class);
             startActivity(intent);
         });
+
+        Button contactButton = findViewById(R.id.buttonContact);
+        contactButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ContactsActivity.class);
+            startActivity(intent);
+        });
+
 
     }
 }
